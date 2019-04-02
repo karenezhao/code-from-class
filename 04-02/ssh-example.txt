@@ -1,0 +1,16 @@
+lawtonnichols:04-02/ $ ssh lawtonnichols@csil-02.cs.ucsb.edu         [12:54:27]
+The authenticity of host 'csil-02.cs.ucsb.edu (128.111.43.22)' can't be established.
+ECDSA key fingerprint is SHA256:d/nnc9GYQW86JTjXpEmGZJrRvHqWR7LRicqXYnRRCkU.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'csil-02.cs.ucsb.edu,128.111.43.22' (ECDSA) to the list of known hosts.
+[lawtonnichols@csil-02 ~]$ ls
+a.out       asdf.cpp~  cs16-su17         Desktop    Music        sample.txt~
+asdf        asdf.txt   cs16_summer_2017  Documents  Pictures     Sent
+asdf2       asdf.txt~  cs16-temp         Downloads  Public       temp
+asdf2.cpp   bin        cs260             Grading    public_html  Templates
+asdf2.cpp~  cs16       cs290i            Makefile   readFiles    Trash
+asdf.cpp    cs162      cs8               Makefile~  sample.txt   Videos
+[lawtonnichols@csil-02 ~]$ vim asdf2.cpp
+[lawtonnichols@csil-02 ~]$ logout
+Connection to csil-02.cs.ucsb.edu closed.
+lawtonnichols:04-02/ $                                               [13:00:19]
