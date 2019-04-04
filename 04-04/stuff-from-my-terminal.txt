@@ -1,0 +1,240 @@
+lawtonnichols:Spring-2019/ $ cd ~                                  [12:28:20]
+lawtonnichols:~/ $ cd Desktop/cs16/Spring-2019/code-from-class       [12:40:05]
+lawtonnichols:code-from-class/ (master*) $ pwd                       [12:40:23]
+/Users/lawtonnichols/Desktop/cs16/Spring-2019/code-from-class
+lawtonnichols:code-from-class/ (master*) $ cd ..                     [12:40:28]
+lawtonnichols:Spring-2019/ $ pwd                                     [12:41:17]
+/Users/lawtonnichols/Desktop/cs16/Spring-2019
+lawtonnichols:Spring-2019/ $ cd code-from-class                      [12:41:18]
+lawtonnichols:code-from-class/ (master*) $ mkdir 04-04               [12:41:22]
+lawtonnichols:code-from-class/ (master*) $ ls                        [12:41:40]
+04-02 04-04 04-09 04-11
+lawtonnichols:code-from-class/ (master*) $ cd 04-04                  [12:41:41]
+lawtonnichols:04-04/ (master*) $ ls                                  [12:41:47]
+lawtonnichols:04-04/ (master*) $ ls                                  [12:41:49]
+division-by-zero.cpp
+lawtonnichols:04-04/ (master*) $ g++ -o division-by-zero division-by-zero.cpp
+division-by-zero.cpp:5:15: warning: division by zero is undefined
+      [-Wdivision-by-zero]
+    cout << 1 / 0 << endl;
+              ^ ~
+1 warning generated.
+lawtonnichols:04-04/ (master*) $ ls                                  [12:43:19]
+division-by-zero     division-by-zero.cpp
+lawtonnichols:04-04/ (master*) $ ./division-by-zero                  [12:43:41]
+-470131296
+lawtonnichols:04-04/ (master*) $ ls                                  [12:43:49]
+division-by-zero     division-by-zero.cpp
+lawtonnichols:04-04/ (master*) $ g++ -o division-by-zero division-by-zero.cpp
+division-by-zero.cpp:5:14: warning: division by zero is undefined
+      [-Wdivision-by-zero]
+    int x = 1/0;
+             ^~
+division-by-zero.cpp:6:15: warning: division by zero is undefined
+      [-Wdivision-by-zero]
+    cout << 1 / 0 << endl;
+              ^ ~
+2 warnings generated.
+lawtonnichols:04-04/ (master*) $ ./division-by-zero                  [12:44:08]
+101633280
+lawtonnichols:04-04/ (master*) $ g++ -o division-by-zero division-by-zero.cpp
+division-by-zero.cpp:6:15: warning: division by zero is undefined
+      [-Wdivision-by-zero]
+    cout << 1 / 0 << endl;
+              ^ ~
+1 warning generated.
+lawtonnichols:04-04/ (master*) $ ./division-by-zero                  [12:44:19]
+-523342432
+lawtonnichols:04-04/ (master*) $ g++ -o division-by-zero division-by-zero.cpp
+lawtonnichols:04-04/ (master*) $ ./division-by-zero                  [12:44:27]
+inf
+lawtonnichols:04-04/ (master*) $ g++ -o division-by-zero division-by-zero.cpp
+lawtonnichols:04-04/ (master*) $ ./division-by-zero                  [12:45:09]
+0
+[1]    5832 floating point exception  ./division-by-zero
+lawtonnichols:04-04/ (master*) $ g++ -o division-by-zero division-by-zero.cpp
+lawtonnichols:04-04/ (master*) $ ./division-by-zero                  [12:46:51]
+Please enter an integer: 1
+1
+lawtonnichols:04-04/ (master*) $ ./division-by-zero                  [12:47:37]
+Please enter an integer: 5
+0
+lawtonnichols:04-04/ (master*) $ ./division-by-zero                  [12:47:40]
+Please enter an integer: 0
+[1]    5901 floating point exception  ./division-by-zero
+lawtonnichols:04-04/ (master*) $ g++ -o undefined-variables undefined-variables.cpp
+lawtonnichols:04-04/ (master*) $ ./undefined-variables               [12:53:42]
+The sum of 1 and 247758902 is:247758903
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-1.0.cpp -o fizzubzz-1.0
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:03:06]
+Enter a number: 3
+The number is divisible by 3
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:03:11]
+Enter a number: 4
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:03:14]
+Enter a number: 6
+The number is divisible by 3
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:03:21]
+Enter a number: 9
+The number is divisible by 3
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-1.0.cpp -o fizzubzz-1.0
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:04:20]
+Enter a number: 2
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:04:23]
+Enter a number: 3
+The number is divisible by 3
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:04:25]
+Enter a number: 4
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:04:27]
+Enter a number: 5
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:04:28]
+Enter a number: 6
+The number is divisible by 3
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-1.0.cpp -o fizzubzz-1.0
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:12:00]
+Enter a number: 2
+2
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0                      [13:12:02]
+Enter a number: 3
+fizz
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-1.0 -o asdf              [13:12:06]
+                                                                     [13:15:11]
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-1.0.cpp -o fizzubzz-1.0
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-2.0.cpp -o fizzubzz-2.0
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0                      [13:15:23]
+1
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 asdf                 [13:15:27]
+2
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 asdf 0               [13:15:41]
+3
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-2.0.cpp -o fizzubzz-2.0
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 asdf 0               [13:17:12]
+3
+./fizzubzz-2.0
+asdf
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-2.0.cpp -o fizzubzz-2.0
+fizzbuzz-2.0.cpp:9:9: error: assigning to 'int' from incompatible type 'char *'
+    x = argv[1];
+        ^~~~~~~
+1 error generated.
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-2.0.cpp -o fizzubzz-2.0
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 2                    [13:23:17]
+2
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 3                    [13:23:21]
+fizz
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0                      [13:23:23]
+[1]    6342 segmentation fault  ./fizzubzz-2.0
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-2.0.cpp -o fizzubzz-2.0
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0                      [13:25:03]
+Improper number of arguments. You should have typed something like:
+./fizzubzz-2.0 5
+[1]    6412 segmentation fault  ./fizzubzz-2.0
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-2.0.cpp -o fizzubzz-2.0
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0                      [13:27:22]
+Improper number of arguments. You should have typed something like:
+./fizzubzz-2.0 5
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 5                    [13:27:23]
+5
+lawtonnichols:04-04/ (master*) $ g++ fizzbuzz-2.0.cpp -o fizzubzz-2.0
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 5                    [13:33:05]
+buzz
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 2                    [13:33:06]
+2
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 3                    [13:33:11]
+fizz
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 5                    [13:33:13]
+buzz
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 12                   [13:33:14]
+fizz
+lawtonnichols:04-04/ (master*) $ ./fizzubzz-2.0 15                   [13:33:17]
+fizzbuzz
+lawtonnichols:04-04/ (master*) $ cd ../..                            [13:33:23]
+lawtonnichols:Spring-2019/ $ cd code-from-class                      [13:40:42]
+lawtonnichols:code-from-class/ (master*) $ ls                        [13:40:44]
+04-02 04-04 04-09 04-11
+lawtonnichols:code-from-class/ (master*) $ git status                [13:40:45]
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    04-04/
+    04-09/
+    04-11/
+
+nothing added to commit but untracked files present (use "git add" to track)
+lawtonnichols:code-from-class/ (master*) $ cd 04-04                  [13:40:48]
+lawtonnichols:04-04/ (master*) $ git status                          [13:41:33]
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    ./
+    ../04-09/
+    ../04-11/
+
+nothing added to commit but untracked files present (use "git add" to track)
+lawtonnichols:04-04/ (master*) $ ls                                  [13:41:34]
+division-by-zero        fizzbuzz-2.0.cpp        undefined-variables
+division-by-zero.cpp    fizzubzz-1.0            undefined-variables.cpp
+fizzbuzz-1.0.cpp        fizzubzz-2.0
+lawtonnichols:04-04/ (master*) $ git add fizzbuzz-1.0.cpp            [13:41:36]
+lawtonnichols:04-04/ (master*) $ git status                          [13:41:43]
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file:   fizzbuzz-1.0.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    division-by-zero
+    division-by-zero.cpp
+    fizzbuzz-2.0.cpp
+    fizzubzz-1.0
+    fizzubzz-2.0
+    undefined-variables
+    undefined-variables.cpp
+    ../04-09/
+    ../04-11/
+
+lawtonnichols:04-04/ (master*) $ git commit -m "added fizzbuzz-1.0.cpp"
+[master 57649fb] added fizzbuzz-1.0.cpp
+ 1 file changed, 20 insertions(+)
+ create mode 100644 04-04/fizzbuzz-1.0.cpp
+lawtonnichols:04-04/ (master*) $ git status                          [13:42:34]
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    division-by-zero
+    division-by-zero.cpp
+    fizzbuzz-2.0.cpp
+    fizzubzz-1.0
+    fizzubzz-2.0
+    undefined-variables
+    undefined-variables.cpp
+    ../04-09/
+    ../04-11/
+
+nothing added to commit but untracked files present (use "git add" to track)
+lawtonnichols:04-04/ (master*) $ git push                            [13:42:37]
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 590 bytes | 590.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/ucsb-cs16-s19-nichols/code-from-class.git
+   0c2f7fd..57649fb  master -> master
+lawtonnichols:04-04/ (master*) $ git pull                            [13:43:20]
+Already up to date.
