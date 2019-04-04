@@ -1,4 +1,5 @@
-#include <iostream> // gives me cin and cout
+#include <iostream> // gives me cin, cout, cerr
+// cerr is used for error output, and it works just like cout
 #include <cstdlib> // gives me atoi and exit
 using namespace std;
 
@@ -7,9 +8,10 @@ int main(int argc, char *argv[]) {
 
     // make sure we have enough arguments before we do anything
     if (argc != 2) {
-        cout << "Improper number of arguments. ";
-        cout << "You should have typed something like: \n";
-        cout << argv[0] << " 5" << endl;
+        // this will look the same as using cout to humans, but not to your terminal
+        cerr << "Improper number of arguments. ";
+        cerr << "You should have typed something like: \n";
+        cerr << argv[0] << " 5" << endl;
         // stop the program
         exit(1); // exit(exit code)
     }
