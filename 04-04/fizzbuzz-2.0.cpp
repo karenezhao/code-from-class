@@ -2,6 +2,9 @@
 #include <cstdlib> // gives me atoi and exit
 using namespace std;
 
+// argc: argument count: how many command line arguments there were
+// argv: argument vector: a list ([]) of strings (char *), one for each command line argument
+// for example, if we run the program like "./fizzbuzz-2.0 5", argc = 2, and argv = ["./fizzbuzz-2.0", "5"]
 int main(int argc, char *argv[]) {
     int x; // declares x--makes space for it in memory
 
