@@ -1,0 +1,240 @@
+Last login: Mon Apr 15 12:15:24 on ttys000
+lawtonnichols:~/ $ cd Desktop/cs16/Spring-2019/ucsb-cs16-s19-nichols.github.io
+
+RVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /Users/lawtonnichols/Desktop/cs16/Spring-2019/ucsb-cs16-s19-nichols.github.io/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+
+lawtonnichols:ucsb-cs16-s19-nichols.github.io/ (master*) $ cd ../code-from-class
+lawtonnichols:code-from-class/ (master*) $ ls                      [12:02:03]
+04-02 04-04 04-09 04-11 04-16
+lawtonnichols:code-from-class/ (master*) $ python3                 [12:02:03]
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 26 2018, 23:26:24)
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> [0.1] * 10
+[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+>>> l = [0.1] * 10
+>>> l
+[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+>>> sum(l)
+0.9999999999999999
+>>> ^D
+lawtonnichols:code-from-class/ (master*) $ ls                        [12:57:52]
+04-02 04-04 04-09 04-11 04-16
+lawtonnichols:code-from-class/ (master*) $ cd 04-16                  [12:57:54]
+lawtonnichols:04-16/ (master*) $ ls                                  [12:57:59]
+shapes.cpp     shapes.h       tdd.cpp        tdd.h          testShapes.cpp
+lawtonnichols:04-16/ (master*) $ g++ shapes.cpp testShapes.cpp tdd.cpp -o testShapes
+In file included from shapes.cpp:1:
+./shapes.h:3:1: error: unknown type name 'string'; did you mean 'std::string'?
+string drawTriangle(int n); // declaration for drawTriangle
+^~~~~~
+std::string
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd:194:65: note:
+      'std::string' declared here
+typedef basic_string<char, char_traits<char>, allocator<char> > string;
+                                                                ^
+shapes.cpp:3:1: error: unknown type name 'string'; did you mean 'std::string'?
+string drawTriangle(int n) {
+^~~~~~
+std::string
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd:194:65: note:
+      'std::string' declared here
+typedef basic_string<char, char_traits<char>, allocator<char> > string;
+                                                                ^
+2 errors generated.
+In file included from testShapes.cpp:2:
+./shapes.h:3:1: error: unknown type name 'string'; did you mean 'std::string'?
+string drawTriangle(int n); // declaration for drawTriangle
+^~~~~~
+std::string
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd:194:65: note:
+      'std::string' declared here
+typedef basic_string<char, char_traits<char>, allocator<char> > string;
+                                                                ^
+1 error generated.
+lawtonnichols:04-16/ (master*) $ g++ shapes.cpp testShapes.cpp tdd.cpp -o testShapes
+lawtonnichols:04-16/ (master*) $ ls                                  [12:59:22]
+shapes.cpp     tdd.cpp        testShapes
+shapes.h       tdd.h          testShapes.cpp
+lawtonnichols:04-16/ (master*) $ ./testShapes                        [12:59:23]
+PASSED: drawTriangle(-1) == ""
+   FAILED: drawTriangle(3)
+     Expected:  *
+***
+ Actual:
+PASSED: drawTriangle(4) == ""
+   FAILED: drawTriangle(5)
+     Expected:   *
+ ***
+*****
+ Actual:
+lawtonnichols:04-16/ (master*) $ g++ shapes.cpp testShapes.cpp tdd.cpp -o testShapes
+testShapes.cpp:28:5: error: use of undeclared identifier 'cout'; did you mean
+      'count'?
+    cout << drawTriangle(5);
+    ^~~~
+    count
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:1246:1: note:
+      'count' declared here
+count(_InputIterator __first, _InputIterator __last, const _Tp& __value_)
+^
+testShapes.cpp:28:5: error: reference to overloaded function could not be
+      resolved; did you mean to call it?
+    cout << drawTriangle(5);
+    ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:1246:1: note:
+      possible target for call
+count(_InputIterator __first, _InputIterator __last, const _Tp& __value_)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:4193:1: note:
+      candidate function [with _CharT = char, _Traits =
+      std::__1::char_traits<char>, _Allocator = std::__1::allocator<char>] not
+      viable: no overload of 'count' matching 'basic_ostream<char,
+      std::__1::char_traits<char> > &' for 1st argument
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:5389:1: note:
+      candidate template ignored: could not match 'shared_ptr' against
+      'basic_string'
+operator<<(basic_ostream<_CharT, _Traits>& __os, shared_ptr<_Yp> const& __p);
+^
+2 errors generated.
+lawtonnichols:04-16/ (master*) $ g++ shapes.cpp testShapes.cpp tdd.cpp -o testShapes
+lawtonnichols:04-16/ (master*) $ ls                                  [13:10:54]
+shapes.cpp     tdd.cpp        testShapes
+shapes.h       tdd.h          testShapes.cpp
+lawtonnichols:04-16/ (master*) $ ./testShapes                        [13:10:55]
+  *
+ ***
+*****
+lawtonnichols:04-16/ (master*) $ g++ shapes.cpp testShapes.cpp tdd.cpp -o testShapes
+lawtonnichols:04-16/ (master*) $ ./testShapes                        [13:11:07]
+     *
+    ***
+   *****
+  *******
+ *********
+***********
+lawtonnichols:04-16/ (master*) $ g++ shapes.cpp testShapes.cpp tdd.cpp -o testShapes
+lawtonnichols:04-16/ (master*) $ ./testShapes                        [13:11:20]
+PASSED: drawTriangle(-1) == ""
+PASSED: drawTriangle(3)
+PASSED: drawTriangle(4) == ""
+PASSED: drawTriangle(5)
+lawtonnichols:04-16/ (master*) $ g++ -S hello.cpp                    [13:11:21]
+lawtonnichols:04-16/ (master*) $ ls                                  [13:14:22]
+hello.cpp      shapes.cpp     tdd.cpp        testShapes
+hello.s        shapes.h       tdd.h          testShapes.cpp
+lawtonnichols:04-16/ (master*) $ g++ -c hello.cpp                    [13:14:23]
+lawtonnichols:04-16/ (master*) $ ls                                  [13:15:43]
+hello.cpp      hello.s        shapes.h       tdd.h          testShapes.cpp
+hello.o        shapes.cpp     tdd.cpp        testShapes
+lawtonnichols:04-16/ (master*) $ ./hello.o                           [13:15:45]
+zsh: permission denied: ./hello.o
+lawtonnichols:04-16/ (master*) $ g++ shapes.cpp testShapes.cpp tdd.cpp -o testShapes
+lawtonnichols:04-16/ (master*) $ g++ -c shapes.cpp                   [13:19:19]
+lawtonnichols:04-16/ (master*) $ ls                                  [13:19:34]
+hello.cpp      hello.s        shapes.h       tdd.cpp        testShapes
+hello.o        shapes.cpp     shapes.o       tdd.h          testShapes.cpp
+lawtonnichols:04-16/ (master*) $ g++ -c shapes.cpp                   [13:19:34]
+lawtonnichols:04-16/ (master*) $ g++ -c tdd.cpp                      [13:20:36]
+lawtonnichols:04-16/ (master*) $ g++ -c testShapes.cpp               [13:20:38]
+lawtonnichols:04-16/ (master*) $ g++ shapes.o tdd.o testShapes.o -o testShapes
+lawtonnichols:04-16/ (master*) $ ./testShapes                        [13:20:57]
+PASSED: drawTriangle(-1) == ""
+PASSED: drawTriangle(3)
+PASSED: drawTriangle(4) == ""
+PASSED: drawTriangle(5)
+lawtonnichols:04-16/ (master*) $ make                                [13:21:00]
+make: *** No targets specified and no makefile found.  Stop.
+lawtonnichols:04-16/ (master*) $ make                                [13:27:39]
+make: `testShapes' is up to date.
+lawtonnichols:04-16/ (master*) $ rm testShapes *.o                   [13:27:44]
+lawtonnichols:04-16/ (master*) $ make                                [13:27:54]
+g++ -c testShapes.cpp
+c++    -c -o shapes.o shapes.cpp
+c++    -c -o tdd.o tdd.cpp
+# The recipe for producing the target (testshapes) is below
+g++ testShapes.o shapes.o tdd.o -o testShapes
+lawtonnichols:04-16/ (master*) $ ls                                  [13:27:59]
+Makefile       shapes.cpp     tdd.cpp        testShapes
+hello.cpp      shapes.h       tdd.h          testShapes.cpp
+hello.s        shapes.o       tdd.o          testShapes.o
+lawtonnichols:04-16/ (master*) $ g++ hello.cpp -o hello              [13:28:50]
+lawtonnichols:04-16/ (master*) $ make hello                          [13:29:03]
+make: `hello' is up to date.
+lawtonnichols:04-16/ (master*) $ rm hello                            [13:29:07]
+lawtonnichols:04-16/ (master*) $ make hello                          [13:29:10]
+c++     hello.cpp   -o hello
+lawtonnichols:04-16/ (master*) $ ls                                  [13:29:22]
+Makefile       hello.s        shapes.o       tdd.o          testShapes.o
+hello          shapes.cpp     tdd.cpp        testShapes
+hello.cpp      shapes.h       tdd.h          testShapes.cpp
+lawtonnichols:04-16/ (master*) $ make                                [13:30:55]
+make: `testShapes' is up to date.
+lawtonnichols:04-16/ (master*) $ make clean                          [13:31:41]
+rm testShapes *.o # removes testShapes and every .o file in the current directory
+lawtonnichols:04-16/ (master*) $ make                                [13:31:43]
+g++ -c testShapes.cpp
+c++    -c -o tdd.o tdd.cpp
+# The recipe for producing the target (testshapes) is below
+g++ testShapes.o  tdd.o -o testShapes
+Undefined symbols for architecture x86_64:
+  "drawTriangle(int)", referenced from:
+      runTests() in testShapes.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testShapes] Error 1
+lawtonnichols:04-16/ (master*) $ make testShapes                     [13:32:00]
+c++    -c -o shapes.o shapes.cpp
+# The recipe for producing the target (testshapes) is below
+g++ testShapes.o shapes.o tdd.o -o testShapes
+lawtonnichols:04-16/ (master*) $ ls                                  [13:32:31]
+Makefile       hello.s        shapes.o       tdd.o          testShapes.o
+hello          shapes.cpp     tdd.cpp        testShapes
+hello.cpp      shapes.h       tdd.h          testShapes.cpp
+lawtonnichols:04-16/ (master*) $ ./testShapes                        [13:32:34]
+PASSED: drawTriangle(-1) == ""
+PASSED: drawTriangle(3)
+PASSED: drawTriangle(4) == ""
+PASSED: drawTriangle(5)
+lawtonnichols:04-16/ (master*) $ g st                       [13:44:47]
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+lawtonnichols:04-16/ (master*) $ g add .                    [14:20:05]
+lawtonnichols:04-16/ (master*) $ g st                       [14:20:08]
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file:   Makefile
+    new file:   hello
+    new file:   hello.cpp
+    new file:   hello.s
+    new file:   shapes.cpp
+    new file:   shapes.h
+    new file:   shapes.o
+    new file:   tdd.cpp
+    new file:   tdd.h
+    new file:   tdd.o
+    new file:   testShapes
+    new file:   testShapes.cpp
+    new file:   testShapes.o
+
+lawtonnichols:04-16/ (master*) $ make clean                 [14:20:09]
+rm testShapes *.o # removes testShapes and every .o file in the current directory
+lawtonnichols:04-16/ (master*) $ ls                         [14:20:13]
+Makefile       hello.s        tdd.cpp
+hello          shapes.cpp     tdd.h
+hello.cpp      shapes.h       testShapes.cpp
