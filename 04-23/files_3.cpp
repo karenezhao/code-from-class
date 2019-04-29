@@ -16,7 +16,7 @@ int main()
     // but your program will not crash
     if (!ifs) {
         cerr << "Open failed" << endl;
-        return 0;
+        return 1;
     }
 
 
