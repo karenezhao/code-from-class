@@ -9,24 +9,24 @@ struct Point {
      double y; //member variable of Point
 }; // <- watch out for this semicolon
 
-struct Box {
-    Point ul;
-    double width;
-    double height;
-};
-
 // Point is now a new type that we can use
 // it is made up of "smaller" types
 
+void printPoint(Point *ptr) {
+    cout << "(" << (*ptr).x << ", " << ptr->y << ")\n";
+}
+
+void initPoint(Point &ref, double xVal, double yVal) {
+    ref.x = xVal;
+    ref.y = yVal;
+}
+
 int main(int argc, char *argv[])
 {
-    // ul.x = 10;     
-    Box b1 = {{500, 800}, 10, 20}; // declaring the Point inside the Box
+    Point p; 
+    initPoint(p, 1.0, 2.0);
 
-    Box b2, b3; 
-    // b2.ul = {500, 800}; // doesn't work outside of b2's declaration
-    b2.ul.x = 500; // member variables can always be accessed and reset
-    b2.ul.y = 800;
+    printPoint(&p); // call-by-pointer
 
     return 0;
 }

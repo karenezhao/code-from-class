@@ -10,7 +10,7 @@ void swapValue(int& x, int& y) {
 int main(int argc, char *argv[])
 {
     int a=30, b=40;
-    swapValue( a, b); 
+    swapValue(a, b); 
     cout<<a<<" "<<b<<endl;
 
     return 0;

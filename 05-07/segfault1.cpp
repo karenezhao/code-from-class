@@ -4,6 +4,7 @@
 // $ gdb segfault1
 // (gdb) run
 // (gdb) print p
+// (gdb) exit
 
 #include <iostream>
 using namespace std;
