@@ -37,6 +37,9 @@ int readFileAndPopulateArray(Point *arr, int max_size)
         current_index++;
     }
 
+    // SORRY I FORGOT TO DO THIS IN THE VIDEO
+    ifs.close();
+
     // need to return the # of elements we added to the array
     return current_index;
 }
