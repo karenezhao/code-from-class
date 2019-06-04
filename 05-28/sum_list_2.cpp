@@ -14,7 +14,7 @@ int sumList(Node *head) {
     }
 
     // recursive case
-    int sum = head->data + sumList(head);
+    int sum = head->data + sumList(head->next);
     return sum;
 }
 
