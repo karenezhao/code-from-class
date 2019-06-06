@@ -4,7 +4,6 @@ using namespace std;
 struct Node {
     int data; // the single value that this Node holds
     Node *next; // a pointer to the next node
-
 };
 
 int sumList(Node *head) {
