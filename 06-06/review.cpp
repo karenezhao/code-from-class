@@ -75,7 +75,7 @@ void for_loops() {
     // execute body if true; otherwise end the loop
     // execute increment statement
     // goto loop
-    for (int i = 10; i >= 1; i++) {
+    for (int i = 10; i >= 1; i--) {
         cout << i << endl;
     }
     cout << "lift off!" << endl;
@@ -98,6 +98,8 @@ void exprs() {
 
     // how do you write the parentheses in the next line?
     cout << ( x + 1 < 5 && y == 9 || b1 && b2 ) << endl;
+    // ↓
+    cout << ( (((x + 1) < 5) && (y == 9)) || (b1 && b2) ) << endl;
 }
 
 void exprs2() {
@@ -114,6 +116,9 @@ void exprs2() {
 // Data representation
 
 /*
+
+assume we're on a 32-bit machine
+this means that every address is 32 bits long (4 bytes)
 
 ints/pointers: 4 bytes
 doubles: 8 bytes
@@ -147,6 +152,8 @@ void arrays() {
 
 // Passing parameters to functions (by value, by pointer, by reference)
 
+// x is a brand new local variable, and
+// touching x does not mess with whatever you passed along
 void by_value(int x) {
     x = 5;
 }
@@ -170,6 +177,8 @@ void test_parameter_passing() {
 
 // return a new array on the heap, that is twice the size of the input array
 // the given array is repeated twice in the new array
+// could also be declared as:
+// int* array_twice(int *arr, int size)
 int* array_twice(int arr[], int size) {
     int *new_arr = new int[size*2];
 
@@ -193,6 +202,10 @@ void pointers() {
     int *y = new int(55);
 
     cout << *y << endl;
+
+    // this is a memory leak unless you save the address
+    // stored in y somewhere, or alternatively
+    // say delete y
 }
 
 // Structs
@@ -219,6 +232,10 @@ void structs() {
 
     Point *pp = &p2;
     pp->y = 5;
+
+    Point p3 = p2; 
+    // p3 is a new Point in memory, with p2's values
+    // messing with p3 doesn't touch p2
 }
 
 // Pointers and structs
@@ -226,6 +243,11 @@ void structs() {
 void setToZero(Point *p) {
     p->x = 0;
     p->y = 0;
+}
+
+void setToZeroTest() {
+    Point p2 = {1, 2};
+    setToZero(&p2);
 }
 
 // Pointers and arrays
@@ -312,7 +334,7 @@ LinkedList* one_two_three() {
 #include <cstring>
 
 void c_strings() {
-    char s1[50] = "cat";
+    char s1[50] = "cat"; // s1[4], s1[5], ... are undeclared but usable
     const char *s2 = "dog";
 
     cout << "length of s1: " << strlen(s1) << endl;
@@ -380,6 +402,11 @@ base case, recursive case
 think about what is happening on the stack
 
 */
+
+int factorial(int n) {
+    if (n == 0) return 1;
+    else return n * factorial(n-1);
+}
 
 // compute nᵖ -- this is a bit similar to the factorial function, isn't it?
 double pow(double n, int p) {
